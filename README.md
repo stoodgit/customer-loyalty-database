@@ -1,69 +1,53 @@
-# Customer Loyalty Database
+# 🛒 Customer Loyalty Program Database Design
 
-## Overview
+An end-to-end relational database design, data model optimization, and analytical SQL querying project developed for a multi-branch franchise retail network.
 
-A university project focused on designing a relational database for a customer loyalty program and using SQL to analyze business data.
+---
 
-The project included database modeling, implementation and analytical SQL queries.
+## 📌 Project Overview
 
-## Business Context
+> **Type:** Academic Team Project (Database Systems Course)  
+> **Institution:** Inha University in Tashkent
 
-The database was designed for a retail/coffee business with customers, branches, products, transactions, loyalty programs, promotions and rewards.
+This project focuses on designing, implementing, and querying a robust relational database for a **Customer Loyalty Program**. The system integrates customer activity, transaction history, branch/employee performance, product inventories, and marketing promotions into a unified database architecture.
 
-The goal was to create a structured database that could support both operational processes and analytical queries.
+### Key Goals:
+* Track customer points, reward redemptions, and purchasing habits.
+* Manage franchise operations across multiple branches and employees.
+* Provide business intelligence via analytical SQL queries (e.g., customer segmentation, branch performance, promo conversion rates).
 
-## My Contribution
+---
 
-I was mainly responsible for:
+## 🛠️ Tech Stack & Tools
 
-* Designing the conceptual database model
-* Developing the logical database model
-* Creating relationships between entities
-* Implementing the database structure
-* Writing analytical SQL queries
+* **Database Engine:** MySQL
+* **Data Modeling:** MySQL Workbench, Entity-Relationship (ER) Diagramming
+* **Language:** SQL (DDL, DML, Analytical Queries)
 
-## Database Structure
+---
 
-The main entities include:
+## 🗂️ Database Architecture & Modeling
 
-* Customer
-* Loyalty Program
-* Transaction
-* Product
-* Product Category
-* Branch
-* Employee
-* Promotion
-* Reward
-* Company
+The database structure went through a complete design lifecycle:
 
-The conceptual and logical models can be found in the [`diagrams`](./diagrams) folder.
+1. **Conceptual Design (ER Diagram):** Identified core business entities (*Customer, Branch, Employee, Product, Transaction, Loyalty Program, Promotion, Reward*) and defined cardinality and business constraints.
+2. **Logical Design (Crow’s Foot Notation):** Transformed EER models into normalized relational tables, resolving Many-to-Many ($M:N$) relationships using junction tables (`shop_at`, `targets`, `get_notify`, `feature_be_feature`, `appear_in`, `be_earned_through`).
+3. **Physical Schema Implementation:** Built normalized MySQL tables using proper Primary Key (PK) and Foreign Key (FK) relational constraints.
 
-## SQL Analysis
+---
 
-I wrote SQL queries to answer business-related questions, including analysis of:
+## 📁 Repository Structure
 
-* Customer activity
-* Transactions
-* Product performance
-* Branch performance
-* Loyalty program activity
-* Promotions and rewards
-
-The queries are available in the [`sql`](./sql) folder.
-
-## Tools
-
-* MySQL
-* SQL
-* MySQL Workbench
-* Relational Database Design
-* ER Modeling
-
-## What I Learned
-
-This project gave me practical experience in relational database design and SQL. I learned how to translate business requirements into a structured database and use SQL to answer analytical questions.
-
-## Project Type
-
-University project — Business Administration / Database Management.
+```text
+├── diagrams/
+│   ├── Team3_ConceptDiagram.jpg      # Conceptual ER Diagram
+│   ├── Team3_LogicalSchema.jpg       # Logical Schema Diagram
+│   └── Team3_Workbench.jpg           # MySQL Workbench Crow's Foot ERD
+├── report_and_presentation/
+│   ├── Team3_main.pdf                # Full Database Design Report
+│   └── Team3_Talk.pdf                # Project Presentation Slides
+├── sql/
+│   ├── Team3_DDL.sql                 # DDL scripts for table structures & constraints
+│   ├── Team3_DML.sql                 # Sample dataset population script
+│   └── Team3_Queries.sql             # 10 business-oriented analytical SQL queries
+└── README.md
