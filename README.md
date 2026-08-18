@@ -60,17 +60,6 @@ The queries are available in the [`sql`](./sql) folder.
 * Relational Database Design
 * ER Modeling
 
-## Project Structure
-
-```text
-customer-loyalty-database/
-│
-├── README.md
-├── sql/
-├── diagrams/
-└── report/
-```
-
 ## What I Learned
 
 This project gave me practical experience in relational database design and SQL. I learned how to translate business requirements into a structured database and use SQL to answer analytical questions.
